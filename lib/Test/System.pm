@@ -39,7 +39,7 @@ use TAP::Harness;
 use UNIVERSAL qw(isa);
 use Data::Dumper;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 Attributes
 
