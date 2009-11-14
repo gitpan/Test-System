@@ -19,9 +19,11 @@ $suite->parameters(
         {
             'ping_count' => 5
         });
-my $formatter = Test::System::Output::Factory->new('html');
-$formatter->output_file('output.html');
+my $formatter = Test::System::Output::Factory->new('console');
+#$formatter->output_file('output.html');
 $suite->runtests('example/execute_these_tests.yaml', {
         formatter => $formatter,
         verbosity => 1,
         });
+
+
