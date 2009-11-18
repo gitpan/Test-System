@@ -19,7 +19,11 @@ $suite->parameters(
         {
             'ping_count' => 5
         });
-my $formatter = Test::System::Output::Factory->new('console');
+#my $formatter = Test::System::Output::Factory->new('console');
+
+use TAP::Formatter::ConsoleTable;
+my $formatter = TAP::Formatter::ConsoleTable->new({
+        color => 1});
 #$formatter->output_file('output.html');
 $suite->runtests('example/execute_these_tests.yaml', {
         formatter => $formatter,
